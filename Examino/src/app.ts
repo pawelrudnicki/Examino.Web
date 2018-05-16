@@ -1,3 +1,12 @@
+import {RouterConfiguration} from 'aurelia-router';
+
 export class App {
-  message = 'Hello World!';
+  
+  configureRouter(config: RouterConfiguration){
+    config.title = 'Examino';
+    config.map([
+      {route: ['', 'home'], moduleId: './home' },
+      {route: 'users', moduleId: './users/config/users-routing' }  
+    ]);
+  }
 }
