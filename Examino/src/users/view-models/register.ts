@@ -1,5 +1,5 @@
 import { autoinject } from "aurelia-dependency-injection";
-import { IUsersService, UsersService } from "../services/users-service";
+import { UsersService } from "../services/users-service";
 import { UserRegisterModel } from "../models/user-register-model";
 import { HttpClient } from "aurelia-fetch-client";
 import { RegisterViewValidator } from "../validators/register-view-validator";
@@ -21,6 +21,6 @@ export class UsersRegisterViewModel {
 
     async register() {
         await this.usersService.register(this.model);
-        toastr.success('Registration succeed');
+        toastr.success('Registration succeed!');
     }
 }

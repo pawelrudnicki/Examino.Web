@@ -1,6 +1,6 @@
 import { UserLoginModel } from "./user-login-model";
 export class UserRegisterModel extends UserLoginModel{
-    email: string;
+    name: string;
     role: string;
     confirmPassword: string;
 
