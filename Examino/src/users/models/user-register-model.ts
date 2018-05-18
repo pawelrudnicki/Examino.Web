@@ -1,11 +1,11 @@
-export class UserRegisterModel {
-    name: string;
+import { UserLoginModel } from "./user-login-model";
+export class UserRegisterModel extends UserLoginModel{
     email: string;
     role: string;
-    password: string;
     confirmPassword: string;
 
     constructor() {
+        super();
         this.role = 'user';
     }
 }
