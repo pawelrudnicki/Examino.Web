@@ -35,7 +35,7 @@ export abstract class DataService {
 
     private configureHttpClient() {
         this.httpClient.configure(config => {
-            config.withBaseUrl('http://localhost:5000/')
+            config.withBaseUrl("http://localhost:5000/")
         });
     }
 }

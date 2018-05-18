@@ -4,7 +4,7 @@ export class UsersRouting{
     configureRouter(config: RouterConfiguration){
         config.title = 'Users';
         config.map([
-            {route: 'register', moduleId: '../view-models/register'}
+            {route:'register', moduleId:'../view-models/register', nav: true, title: 'Register' }
         ]);
     }
 }
