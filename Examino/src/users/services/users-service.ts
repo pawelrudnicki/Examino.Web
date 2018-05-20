@@ -5,6 +5,7 @@ import { HttpClient } from "aurelia-fetch-client";
 import { UserLoginModel } from "../models/user-login-model";
 import { UserAuthModel } from "../models/user-auth-model";
 import { AuthService } from "../../core/auth-service";
+import { UserIdentityModel } from "../models/user-identity-model";
 
 
 
@@ -23,6 +24,11 @@ export class UsersService extends DataService {
     login(model: UserLoginModel) : Promise<UserAuthModel> {
         let url = 'account/login';
         return super.post<UserAuthModel>(url, model, false);
+    }
+
+    getUserIdentity() : Promise<UserIdentityModel> {
+        let url = 'account';
+        return super.get<UserIdentityModel>(url, true);
     }
 }
 

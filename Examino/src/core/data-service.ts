@@ -34,7 +34,7 @@ export abstract class DataService {
         if(isProtected)
             requestInit.headers = this.createAuthorizationHeader();
         
-        return this.httpClient.fetch(endpoint, requestInit).then(response => response.json());
+        return this.httpClient.fetch(endpoint, requestInit).then(response => response.json().catch(() => {}));
     }
 
     private configureHttpClient() {
