@@ -1,3 +1,19 @@
 <template>
-  <h1>${message}</h1>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <require from="toastr/build/toastr.min.css"></require>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">Examino</a>
+      </div>
+      <div class="collapse navbar-collapse" if.bind="identityService.isUserLogged">
+        <span class="navbar-text navbar-right">
+          Hello ${identityService.userIdentity.name}!
+        </span>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <router-view></router-view>
+  </div>
 </template>

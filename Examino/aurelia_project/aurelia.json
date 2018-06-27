@@ -46,6 +46,7 @@
           "aurelia-bootstrapper",
           "aurelia-dependency-injection",
           "aurelia-event-aggregator",
+          "aurelia-fetch-client",
           "aurelia-framework",
           "aurelia-history",
           "aurelia-history-browser",
@@ -63,6 +64,27 @@
           "aurelia-task-queue",
           "aurelia-templating",
           "aurelia-templating-binding",
+          "jquery",
+          {
+            "name": "bootstrap",
+            "path": "../node_modules/bootstrap/dist",
+            "main": "js/bootstrap.min",
+            "deps": ["jquery"],
+            "exports": "$",
+            "resources": ["css/bootstrap.css"]
+          },
+          {
+            "name": "toastr",
+            "path": "../node_modules/toastr",
+            "main": "toastr",
+            "deps": ["jquery"],
+            "resources": ["build/toastr.min.css"]
+          },
+          {
+            "name": "aurelia-validation",
+            "path": "../node_modules/aurelia-validation/dist/amd",
+            "main": "aurelia-validation"
+          },
           {
             "name": "aurelia-templating-resources",
             "path": "../node_modules/aurelia-templating-resources/dist/amd",
