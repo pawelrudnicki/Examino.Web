@@ -6,6 +6,6 @@ export class UserRegisterModel extends UserLoginModel{
 
     constructor() {
         super();
-        this.role = 'user';
+        this.role = 'admin';
     }
 }
