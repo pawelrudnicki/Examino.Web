@@ -2,17 +2,15 @@ import { UserIdentityModel } from "../users/models/user-identity-model";
 
 export class IdentityService {
 
-    get userIdentity() {
+    public get isUserLogged() { return this.identity? true : false};
+
+    get userIdentity(): UserIdentityModel {
         return this.identity;
-    }
+    };
 
-    get isUserLogged() {
-        return this.identity? true : false;
-    }
+    private identity: UserIdentityModel;    
 
-    private identity: UserIdentityModel;
-
-    setUserIdentity(userIdentity: UserIdentityModel) : void{
+    setUserIdentity(userIdentity: UserIdentityModel) : void {
         this.identity = userIdentity;
     }
 }
