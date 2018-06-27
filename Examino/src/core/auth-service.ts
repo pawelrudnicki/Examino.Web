@@ -1,6 +1,6 @@
 export class AuthService {
 
-    private rememberMe: boolean;
+    private rememberMe: boolean = true;
     private readonly storageKey = 'access_token';
     private get storage() { return this.rememberMe? localStorage : sessionStorage };
 
@@ -8,8 +8,8 @@ export class AuthService {
         this.setStorage();
     }
 
-    setAccessToken(accessToken: string, remeberMe: boolean) : void {
-        this.rememberMe = remeberMe;
+    setAccessToken(accessToken: string, rememberMe: boolean) : void {
+        this.rememberMe = rememberMe;
         this.storage.setItem(this.storageKey, accessToken);
     }
 
@@ -21,7 +21,7 @@ export class AuthService {
         this.storage.clear();
     }
 
-    private setStorage(){
+    private setStorage() {
         this.rememberMe = localStorage.getItem(this.storageKey) !== null;
     }
 }
