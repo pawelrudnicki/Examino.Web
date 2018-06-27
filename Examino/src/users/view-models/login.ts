@@ -15,9 +15,8 @@ export class UsersLoginViewModel {
     private model: UserLoginModel;
     private rememberMe: boolean;
 
-    constructor(private usersService: UsersService, private identityService:IdentityService,
-        private router:Router, private authService: AuthService, validator: LoginViewValidator, 
-        validationControllerFactory: ValidationControllerFactory) {
+    constructor(private usersService: UsersService, private authService : AuthService,
+        private identityService: IdentityService, private router: Router, validator: LoginViewValidator, validationControllerFactory: ValidationControllerFactory) {
         this.model = new UserLoginModel();
         this.rememberMe = true;
         this.validationController = validationControllerFactory.createForCurrentScope();
