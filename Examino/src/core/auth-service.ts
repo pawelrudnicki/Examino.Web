@@ -1,6 +1,6 @@
 export class AuthService {
 
-    private rememberMe: boolean = true;
+    private rememberMe: boolean;
     private readonly storageKey = 'access_token';
     private get storage() { return this.rememberMe? localStorage : sessionStorage };
 

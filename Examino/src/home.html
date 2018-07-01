@@ -1,3 +1,27 @@
 <template>
-    HOME
+    <div class="row">
+        <input type="text" class="form-control" placeholder="Search..." value.bind="searchText & debounce: 500">
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 col-md-3" repeat.for="exam of exams">
+            <div class="thumbnail">
+                <img src="images/small-pencil.png">
+                <div class="caption">
+                    <h3>${exam.name}</h3>
+                    <p>${exam.description}</p>
+                    <hr>
+                    <p>
+                        Start date: ${exam.startDate}
+                    </p>
+                    <p>
+                        End date: ${exam.endDate}
+                    </p>
+                    <p>
+                        <button class="btn btn-primary" click.delegate="redirectToExamDetails(exam.id)">Solve</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

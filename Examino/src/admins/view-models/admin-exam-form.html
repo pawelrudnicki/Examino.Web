@@ -1,0 +1,28 @@
+<template>
+    <div class="page-header">
+        <h1>${isCreateMode? 'CreateExam' : 'Edit exam'}</h1>
+    </div>
+    <form>
+        <div class="form-group">
+            <label for="admin-exam-form-name">Name</label>
+            <input type="text" class="form-control" id="admin-exam-form-name" placeholder="Name" value.bind="model.name">
+        </div>
+        <div class="form-group">
+            <label for="admin-exam-form-description">Description</label>
+            <input type="text" class="form-control" id="admin-exam-form-description" placeholder="Description" value.bind="model.description">
+        </div>
+        <div if.bind="isCreateMode">
+            <div class="form-group">
+                <label for="admin-exam-form-start-date">Start date</label>
+                <input type="text" class="form-control" id="admin-exam-start-date" placeholder="Start date" value.bind="model.startDate">
+            </div>
+            <div class="form-group">
+                <label for="admin-exam-form-end-date">End date</label>
+                <input type="text" class="form-control" id="admin-exam-end-date" placeholder="End date" value.bind="model.endDate">
+            </div>
+        </div>
+        <button class="btn btn-warning" click.delegate="redirectToAdminExams()">Cancel</button>
+        <button class="btn btn-success" click.delegate="createExam()" if.bind="isCreateMode">Create exam</button>
+        <button class="btn btn-primary" click.delegate="editExam()" if.bind="!isCreateMode">Edit exam</button>
+    </form>
+</template>

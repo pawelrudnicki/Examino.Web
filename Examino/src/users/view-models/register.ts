@@ -4,7 +4,6 @@ import { UserRegisterModel } from "../models/user-register-model";
 import { HttpClient } from "aurelia-fetch-client";
 import { RegisterViewValidator } from "../validators/register-view-validator";
 import { ValidationControllerFactory, ValidationController } from "aurelia-validation";
-import * as toastr from "toastr";
 
 @autoinject()
 export class UsersRegisterViewModel {
@@ -21,6 +20,5 @@ export class UsersRegisterViewModel {
 
     async register() {
         await this.usersService.register(this.model);
-        toastr.success('Registration succeed!');
     }
 }

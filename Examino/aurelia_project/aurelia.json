@@ -81,6 +81,11 @@
             "resources": ["build/toastr.min.css"]
           },
           {
+            "name": "moment",
+            "path": "../node_modules/moment/min",
+            "main": "moment.min"
+          },
+          {
             "name": "aurelia-validation",
             "path": "../node_modules/aurelia-validation/dist/amd",
             "main": "aurelia-validation"
