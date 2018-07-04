@@ -28,6 +28,11 @@ export class AdminExamsViewModel {
         this.router.navigate(url);
     }
 
+    redirectToAdminExerciseForm(examId: string) {
+        let url = `#/admins/exams/${examId}/exercise`;
+        this.router.navigate(url);
+    }
+
     private async getAdminExams() {
         this.exams = await this.examsService.browse('');
     }

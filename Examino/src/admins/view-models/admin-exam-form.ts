@@ -4,6 +4,7 @@ import { CreateExamModel } from "../../exams/models/create-exam-model";
 import { autoinject } from "aurelia-framework";
 import { ExamsService } from "../../exams/services/exam-service";
 import { Router } from "aurelia-router";
+import { ExamExerciseModel } from "../../exams/models/exam-exercise-model";
 
 @autoinject()
 export class AdminExamFormViewModel {

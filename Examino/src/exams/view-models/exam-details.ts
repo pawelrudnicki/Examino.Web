@@ -1,12 +1,12 @@
-import { ExamDetailsModel } from "../models/exam-details-model";
 import { autoinject } from 'aurelia-dependency-injection';
 import { ExamsService } from "../services/exam-service";
+import { ExamModel } from '../models/exam-model';
 
 @autoinject()
 export class ExamDetailsViewModel {
     
-    public examId: string;
-    public exam: ExamDetailsModel;
+    private examId: string;
+    public exam: ExamModel;
 
     constructor(private examsService: ExamsService) {}
 

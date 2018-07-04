@@ -1,5 +1,6 @@
 export class ExamExerciseModel {
-    id: string;
+    examId: string;
+    name: string;
     question: string;
     answerA: string;
     answerB: string;

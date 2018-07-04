@@ -7,7 +7,8 @@ export class AdminsRouting {
 
         config.map([
             {route: 'exams', moduleId: '../view-models/admin-exams'},
-            {route: ['exams/create', 'exams/:id/update'] , moduleId: '../view-models/admin-exam-form'}
+            {route: ['exams/create', 'exams/:id/update'] , moduleId: '../view-models/admin-exam-form'},
+            {route: 'exams/:id/exercise', moduleId: '../view-models/admin-exercise-form'}
         ]);
     }
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="page-header">
-        <h1>${isCreateMode? 'CreateExam' : 'Edit exam'}</h1>
+        <h1>${isCreateMode? 'Create exam' : 'Edit exam'}</h1>
     </div>
     <form>
         <div class="form-group">
@@ -21,6 +21,29 @@
                 <input type="text" class="form-control" id="admin-exam-end-date" placeholder="End date" value.bind="model.endDate">
             </div>
         </div>
+        <div if.bind="isExerciseMode">
+            <div class="form-group">
+                <label for="admin-exam-form-question">Question</label>
+                <input type="text" class="form-control" id="admin-exam-question" placeholder="Question" value.bind="exerciseModel.question">
+            </div>
+            <div class="form-group">
+                <label for="admin-exam-form-answerA">First answer</label>
+                <input type="text" class="form-control" id="admin-exam-answerA" placeholder="answerA" value.bind="exerciseModel.answerA">
+            </div>
+            <div class="form-group">
+                <label for="admin-exam-form-answerB">Second answer</label>
+                <input type="text" class="form-control" id="admin-exam-answerB" placeholder="answerB" value.bind="exerciseModel.answerB">
+            </div>
+            <div class="form-group">
+                <label for="admin-exam-form-answerC">Third answer</label>
+                <input type="text" class="form-control" id="admin-exam-answerC" placeholder="answerC" value.bind="exerciseModel.answerC">
+            </div>
+            <div class="form-group">
+                <label for="admin-exam-form-answerC">Fourth answer</label>
+                <input type="text" class="form-control" id="admin-exam-answerD" placeholder="answerD" value.bind="exerciseModel.answerD">
+            </div>
+        </div>
+
         <button class="btn btn-warning" click.delegate="redirectToAdminExams()">Cancel</button>
         <button class="btn btn-success" click.delegate="createExam()" if.bind="isCreateMode">Create exam</button>
         <button class="btn btn-primary" click.delegate="editExam()" if.bind="!isCreateMode">Edit exam</button>
